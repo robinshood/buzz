@@ -1,0 +1,17 @@
+# Channel: #automasjon-backlog
+# Trigger: any message containing "!auto" (e.g. "!auto rydde e-postinnboksen hver uke").
+# LOOP GUARD: the notify step deliberately does NOT echo the message text — echoing
+# it would repost the literal "!auto" token and re-trigger this workflow. Agents are
+# also instructed (pack instructions.md) never to write the literal token themselves.
+name: "Backlog intake"
+description: "Captures !auto proposals and hands them to Los for scoring"
+trigger:
+  on: message_posted
+  filter: 'str_contains(trigger_text, "!auto")'
+steps:
+  - id: ack
+    action: add_reaction
+    emoji: clipboard
+  - id: notify_los
+    action: send_message
+    text: "@Los nytt forslag til rangeringslisten fra {{trigger.author | npub}} — se den siste meldingen merket med 📋 i kanalen. Scor den etter rubrikken og oppdater canvas + minne."

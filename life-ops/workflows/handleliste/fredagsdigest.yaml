@@ -1,0 +1,12 @@
+# Channel: #handleliste
+# Cron is UTC. "30 13 * * FRI" = Friday 15:30 Oslo in summer (CEST, UTC+2);
+# 14:30 Oslo in winter. Update after DST shifts if the hour matters.
+name: "Fredagsdigest"
+description: "Pre-weekend shopping digest from Kurv"
+trigger:
+  on: schedule
+  cron: "30 13 * * FRI"
+steps:
+  - id: digest
+    action: send_message
+    text: "@Kurv lag fredagsdigest: oppsummer handlelisten fra canvas gruppert etter butikkseksjon, fjern duplikater, og sjekk om noen basisvarer mangler."
