@@ -1,0 +1,28 @@
+{
+  "$schema": "https://open-plugin-spec.org/schema/v1/plugin.json",
+  "id": "com.robinshood.life-ops",
+  "name": "Life Ops",
+  "version": "0.1.0",
+  "description": "A four-agent personal life-operations team: Los orchestrates, Øre handles finance, Vaskebjørn plans the household, Kurv keeps the shopping list.",
+  "author": "Robin",
+  "license": "Apache-2.0",
+  "keywords": ["life-ops", "personal", "finance", "household", "orchestrator"],
+  "personas": [
+    "agents/los.persona.md",
+    "agents/ore.persona.md",
+    "agents/vaskebjorn.persona.md",
+    "agents/kurv.persona.md"
+  ],
+  "pack_instructions": "instructions.md",
+  "defaults": {
+    "model": "anthropic:claude-sonnet-5",
+    "temperature": 0.7,
+    "triggers": {
+      "mentions": true,
+      "keywords": [],
+      "all_messages": false
+    },
+    "thread_replies": true,
+    "broadcast_replies": false
+  }
+}

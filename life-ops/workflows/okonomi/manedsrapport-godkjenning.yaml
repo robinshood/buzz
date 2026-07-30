@@ -1,0 +1,26 @@
+# Channel: #okonomi (private)
+# Cron is UTC. "0 6 1 * *" = 1st of each month, 08:00 Oslo in summer (CEST, UTC+2);
+# 07:00 Oslo in winter.
+# Approval-gated: the deep-dive (full Era read incl. investment review) only runs
+# after explicit approval. Approve/deny from the desktop Workflows UI or:
+#   buzz workflows approve --token <UUID> [--approved false --note "..."]
+# Replace "@robin" with your actual display name / mention on the relay.
+name: "Månedsrapport med godkjenning"
+description: "Monthly finance deep-dive behind an approval gate"
+trigger:
+  on: schedule
+  cron: "0 6 1 * *"
+steps:
+  - id: gate
+    action: request_approval
+    from: "@robin"
+    message: "Godkjenn månedlig dyp økonomigjennomgang (full Era-lesing, inkludert investeringsvurdering)?"
+    timeout: "48h"
+  - id: run_report
+    if: "steps_gate_output_approved == true"
+    action: send_message
+    text: "@Øre godkjent: kjør månedsrapport — forbrukstrender, abonnementsrevisjon, kontantstrøm og investeringsvurdering mot watchlisten. Publiser som note."
+  - id: declined
+    if: "steps_gate_output_approved == false"
+    action: send_message
+    text: "Månedsrapporten hoppes over denne måneden (avslått eller tidsavbrutt)."

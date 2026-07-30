@@ -1,0 +1,25 @@
+# One Buzz agent = one buzz-acp process (this build has no pack auto-load).
+# Instance name = persona machine name: buzz-agent@los, buzz-agent@ore, ...
+# Env file: /etc/lifeops/<name>.env (root-owned, mode 600) — see agents/*.env.example
+[Unit]
+Description=Buzz agent harness (%i)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=lifeops
+Group=lifeops
+EnvironmentFile=/etc/lifeops/%i.env
+Environment=AGENT_CWD=/srv/lifeops/agents/%i
+WorkingDirectory=/srv/lifeops/agents/%i
+ExecStart=/usr/local/bin/buzz-acp
+Restart=always
+RestartSec=10
+# Hardening (loosen only if the agent genuinely needs more)
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/srv/lifeops
+
+[Install]
+WantedBy=multi-user.target

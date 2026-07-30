@@ -1,0 +1,14 @@
+# Offline validator for the life-ops workflow YAMLs.
+# The empty [workspace] table detaches this crate from the root Buzz workspace,
+# so it never enters `just ci` — build it on demand:
+#   cargo run --manifest-path life-ops/verify/Cargo.toml
+[package]
+name = "lifeops-verify"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[workspace]
+
+[dependencies]
+buzz-workflow = { path = "../../crates/buzz-workflow" }

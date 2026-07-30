@@ -1,0 +1,12 @@
+# Channel: #automasjon-backlog
+# Cron is UTC. "0 15 * * SUN" = Sunday 17:00 Oslo in summer (CEST, UTC+2) —
+# deliberately one hour before the #hushold weekly prompt so Los's review lands first.
+name: "Ukentlig re-rangering"
+description: "Weekly backlog re-ranking ritual owned by Los"
+trigger:
+  on: schedule
+  cron: "0 15 * * SUN"
+steps:
+  - id: weekly_review
+    action: send_message
+    text: "@Los kjør ukentlig gjennomgang: re-ranger rangeringslisten (canvas + minne-sluggen backlog_v1 med CAS-patch), oppsummer hva teamet gjorde denne uken, og foreslå neste automatisering som bør bygges."

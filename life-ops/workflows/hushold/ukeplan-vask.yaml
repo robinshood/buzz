@@ -1,0 +1,14 @@
+# Channel: #hushold
+# Cron is UTC. "0 16 * * SUN" = Sunday 18:00 Oslo in summer (CEST, UTC+2);
+# in winter (CET, UTC+1) it fires 17:00 Oslo — run `buzz workflows update` after
+# DST shifts if the hour matters. Named weekdays are deliberate (numeric DOW is
+# dialect-ambiguous in the cron parser).
+name: "Ukeplan vask"
+description: "Weekly cleaning and laundry planning prompt for Vaskebjørn"
+trigger:
+  on: schedule
+  cron: "0 16 * * SUN"
+steps:
+  - id: prompt_plan
+    action: send_message
+    text: "@Vaskebjørn lag ukesplan for vask og klesvask: les rotasjonsstatus fra minnet, arkiver forrige ukes plan som note, og skriv den nye planen til canvas."

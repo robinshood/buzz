@@ -1,0 +1,20 @@
+# Channel: #handleliste
+# Trigger: someone reacts 🛒 to any message in the channel.
+# NOTE (verified in buzz-workflow): for reaction triggers, {{trigger.text}} is the
+# EMOJI character, not the reacted message — the reacted message's event id is
+# {{trigger.message_id}}. The agent fetches the message itself.
+# The `emoji:` filter is plain string equality against the reaction event content;
+# verify once against the relay debug log ("Reaction emoji mismatch") that your
+# client sends the literal 🛒 char, and adjust via `buzz workflows update` if not.
+name: "Legg til fra reaksjon"
+description: "Cart-reaction feeds the message into the shopping list"
+trigger:
+  on: reaction_added
+  emoji: "🛒"
+steps:
+  - id: ack
+    action: add_reaction
+    emoji: white_check_mark
+  - id: handoff
+    action: send_message
+    text: "@Kurv en melding ble merket for handlelisten (melding {{trigger.message_id}}). Hent den med buzz messages thread, trekk ut varene og oppdater canvasen."

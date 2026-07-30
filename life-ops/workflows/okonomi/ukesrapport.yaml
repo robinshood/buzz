@@ -1,0 +1,12 @@
+# Channel: #okonomi (private)
+# Cron is UTC. "0 5 * * MON" = Monday 07:00 Oslo in summer (CEST, UTC+2);
+# 06:00 Oslo in winter. Update after DST shifts if the hour matters.
+name: "Ukentlig økonomidigest"
+description: "Weekly read-only finance digest from Øre (Era Context)"
+trigger:
+  on: schedule
+  cron: "0 5 * * MON"
+steps:
+  - id: weekly_prompt
+    action: send_message
+    text: "@Øre lag ukesrapport: forbruk mot budsjett, uvanlige transaksjoner, og kommende faste trekk. Post et kort sammendrag her og publiser full rapport som note."
