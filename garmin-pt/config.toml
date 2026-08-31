@@ -1,0 +1,21 @@
+# Terskler for PT-beslutningsreglene. Endre her — ikke i koden.
+
+[readiness]
+min_baseline_days = 28     # under dette: status "calibrating", ingen råd
+baseline_window_days = 60  # vindu for HRV/RHR-baseline
+hrv_z_red = -1.5           # regel 1: flytt HIIT, kjør sone 2/mobilitet
+hrv_z_yellow = -0.5        # regel 2: behold økt, kutt toppsett / -10 % intensitet
+hrv_z_green_high = 1.0     # regel 4: legg på (+1 sett / +2.5 kg) hvis lav last
+short_sleep_hours = 6.0
+short_sleep_nights = 2     # regel 1 alternativ trigger: to korte netter
+rhr_dev_flag_bpm = 5       # hvilepuls-avvik som flagges i signals
+
+[load]
+acwr_ceiling = 1.5         # regel 5: tvungen lettuke
+acwr_floor = 0.8           # "lav last" i regel 4
+monotony_flag = 2.0
+throttle_seconds = 1.5     # pause mellom Garmin-API-kall i ingest
+
+[e1rm]
+epley_max_reps = 12        # sett med flere reps teller ikke i e1RM (men i volum)
+trend_min_points = 3       # min. antall uker for trendberegning

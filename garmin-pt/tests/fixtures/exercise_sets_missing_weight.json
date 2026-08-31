@@ -1,0 +1,33 @@
+{
+  "activityId": 987654323,
+  "exerciseSets": [
+    {
+      "exercises": [
+        { "category": "PULL_UP", "name": null, "probability": 91.0 }
+      ],
+      "repetitionCount": 8,
+      "weight": null,
+      "duration": 35.0,
+      "setType": "ACTIVE",
+      "startTime": "2026-08-27T07:03:00.0"
+    },
+    {
+      "exercises": [
+        { "category": "OBSCURE_MOVEMENT_XYZ", "name": null, "probability": 45.0 }
+      ],
+      "repetitionCount": null,
+      "weight": null,
+      "duration": 40.0,
+      "setType": "ACTIVE",
+      "startTime": "2026-08-27T07:06:00.0"
+    },
+    {
+      "exercises": [],
+      "repetitionCount": 10,
+      "weight": 24000.0,
+      "duration": 38.0,
+      "setType": "ACTIVE",
+      "startTime": "2026-08-27T07:09:00.0"
+    }
+  ]
+}

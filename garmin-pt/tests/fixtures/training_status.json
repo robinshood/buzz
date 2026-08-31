@@ -1,0 +1,23 @@
+{
+  "userId": 123456,
+  "mostRecentVO2Max": {
+    "generic": {
+      "calendarDate": "2026-08-30",
+      "vo2MaxPreciseValue": 52.3,
+      "vo2MaxValue": 52.0,
+      "fitnessAge": 29
+    },
+    "cycling": null
+  },
+  "mostRecentTrainingStatus": {
+    "latestTrainingStatusData": {
+      "3388655236": {
+        "calendarDate": "2026-08-30",
+        "trainingStatus": 4,
+        "trainingStatusFeedbackPhrase": "PRODUCTIVE_4",
+        "lactateThresholdHeartRate": 168
+      }
+    }
+  },
+  "mostRecentTrainingLoadBalance": {}
+}

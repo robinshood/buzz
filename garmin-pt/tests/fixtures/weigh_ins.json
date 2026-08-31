@@ -1,0 +1,13 @@
+{
+  "startDate": "2026-08-30",
+  "endDate": "2026-08-30",
+  "dateWeightList": [
+    {
+      "calendarDate": "2026-08-30",
+      "weight": 82400.0,
+      "sourceType": "INDEX_SCALE",
+      "timestampGMT": 1787644800000
+    }
+  ],
+  "totalAverage": { "weight": 82400.0 }
+}

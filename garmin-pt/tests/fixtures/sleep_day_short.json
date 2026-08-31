@@ -1,0 +1,14 @@
+{
+  "dailySleepDTO": {
+    "calendarDate": "2026-08-29",
+    "sleepTimeSeconds": 19800,
+    "deepSleepSeconds": 3000,
+    "lightSleepSeconds": 12000,
+    "remSleepSeconds": 3600,
+    "awakeSleepSeconds": 1200,
+    "sleepScores": {
+      "overall": { "value": 55, "qualifierKey": "FAIR" }
+    }
+  },
+  "restingHeartRate": 51
+}

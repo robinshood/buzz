@@ -1,0 +1,13 @@
+{
+  "calendarDate": "2026-08-30",
+  "totalSteps": 9432,
+  "totalKilocalories": 2450.0,
+  "averageStressLevel": 27,
+  "maxStressLevel": 71,
+  "bodyBatteryHighestValue": 82,
+  "bodyBatteryLowestValue": 21,
+  "bodyBatteryMostRecentValue": 44,
+  "restingHeartRate": 47,
+  "minHeartRate": 44,
+  "maxHeartRate": 148
+}
