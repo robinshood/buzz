@@ -133,6 +133,15 @@ sitt («45 netter HRV i 60d-baseline») — tynn basis skal synes.
   mangler ofte. e1RM beregnes bare på komplette sett; bruk
   `log_strength_session` for å korrigere nøkkeløkter.
 
+## Agentene: Coach + Forsker på Buzz (fase 4–6)
+
+PT-agenten («Coach», Sonnet 5) og research-agenten («Forsker», Opus 5) er
+levert som en Buzz persona-pakke i [`pack/`](pack/) med tilhørende
+cron-workflows i [`workflows/`](workflows/) (mandagsplan, daglig
+morgensjekk, søndagsoppsummering). Oppsett — nøkler, #trening-kanal,
+launchd-kjøring av buzz-acp med `claude-agent-acp`-runtimen, og
+workflow-registrering — står i [`pack/README.md`](pack/README.md).
+
 ## Utvikling
 
 ```bash

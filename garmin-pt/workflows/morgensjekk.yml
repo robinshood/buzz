@@ -1,0 +1,15 @@
+# Daglig morgensjekk — Coach poster dagens readiness.
+# Registreres i #trening-kanalen: buzz workflows create --file morgensjekk.yml --channel <uuid>
+# NB: cron er UTC. '30 4 * * *' = 06:30 Oslo om vinteren, 07:30 om sommeren.
+name: "Morgensjekk"
+description: "Daglig readiness-melding og påminnelse om selvrapporten"
+trigger:
+  on: schedule
+  cron: "30 4 * * *"
+steps:
+  - id: vekk_coach
+    action: send_message
+    text: >-
+      @Coach Morgensjekk. Følg morgenprotokollen: hent readiness, gi dagens
+      anbefaling (kjør/juster/flytt økta) på maks 4 linjer, og minn Robin om
+      15-sekunders selvrapporten hvis den mangler for i dag.

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://open-plugin-spec.org/schema/v1/plugin.json",
+  "id": "com.robin.garmin-pt",
+  "name": "Garmin-PT",
+  "version": "0.1.0",
+  "personas": ["agents/coach.persona.md", "agents/forsker.persona.md"],
+  "pack_instructions": "instructions.md",
+  "mcp_config": ".mcp.json",
+  "defaults": {
+    "model": "anthropic:claude-sonnet-5",
+    "triggers": { "mentions": true, "keywords": [], "all_messages": false },
+    "subscribe": ["#trening"],
+    "thread_replies": true,
+    "broadcast_replies": false
+  }
+}
