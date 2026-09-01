@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "garmin-pt": {
+      "command": "uv",
+      "args": ["--directory", "/ABSOLUTT/STI/TIL/garmin-pt", "run", "garmin-pt-mcp"]
+    }
+  }
+}

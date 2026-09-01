@@ -1,0 +1,16 @@
+# Mandagsplan — vekker Coach til å lage ukens plan.
+# Registreres i #trening-kanalen: buzz workflows create --file mandagsplan.yml --channel <uuid>
+# NB: cron er UTC. '0 5 * * 1' = 06:00 Oslo om vinteren, 07:00 om sommeren.
+name: "Mandagsplan"
+description: "Ukentlig planlegging: Coach vurderer forrige uke og foreslår 4 økter"
+trigger:
+  on: schedule
+  cron: "0 5 * * 1"
+steps:
+  - id: vekk_coach
+    action: send_message
+    text: >-
+      @Coach Lag ukesplan. Følg mandagsprotokollen: vurder forrige uke
+      (planlagt vs. utført), readiness-trend og belastning; foreslå ukens
+      fire økter med begrunnelse og datagrunnlag. IKKE push til Garmin før
+      Robin har svart «kjør» i tråden.

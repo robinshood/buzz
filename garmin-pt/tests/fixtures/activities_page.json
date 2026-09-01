@@ -1,0 +1,40 @@
+[
+  {
+    "activityId": 987654321,
+    "activityName": "Kveldsløp sone 2",
+    "startTimeLocal": "2026-08-29 17:31:04",
+    "activityType": { "typeId": 1, "typeKey": "running" },
+    "duration": 3612.4,
+    "distance": 10023.0,
+    "averageHR": 152.0,
+    "maxHR": 176.0,
+    "calories": 640.0,
+    "aerobicTrainingEffect": 3.1,
+    "anaerobicTrainingEffect": 0.4,
+    "activityTrainingLoad": 132.6,
+    "hrTimeInZone_1": 240.0,
+    "hrTimeInZone_2": 1980.0,
+    "hrTimeInZone_3": 900.0,
+    "hrTimeInZone_4": 380.0,
+    "hrTimeInZone_5": 112.4
+  },
+  {
+    "activityId": 987654322,
+    "activityName": "Styrke A",
+    "startTimeLocal": "2026-08-28 07:02:11",
+    "activityType": { "typeId": 13, "typeKey": "strength_training" },
+    "duration": 3120.0,
+    "distance": 0.0,
+    "averageHR": 104.0,
+    "maxHR": 141.0,
+    "calories": 310.0,
+    "aerobicTrainingEffect": 1.4,
+    "anaerobicTrainingEffect": 0.9,
+    "activityTrainingLoad": null,
+    "hrTimeInZone_1": null,
+    "hrTimeInZone_2": null,
+    "hrTimeInZone_3": null,
+    "hrTimeInZone_4": null,
+    "hrTimeInZone_5": null
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "generic": {
+      "calendarDate": "2026-08-30",
+      "vo2MaxPreciseValue": 52.3,
+      "vo2MaxValue": 52.0,
+      "fitnessAge": 29
+    },
+    "cycling": null,
+    "heatAltitudeAcclimation": null
+  }
+]

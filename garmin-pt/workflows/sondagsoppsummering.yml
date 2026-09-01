@@ -1,0 +1,16 @@
+# Søndagsoppsummering — Coach evaluerer uken mot sin egen mandagsbegrunnelse.
+# Registreres i #trening-kanalen: buzz workflows create --file sondagsoppsummering.yml --channel <uuid>
+# NB: cron er UTC. '0 18 * * 0' = 19:00 Oslo om vinteren, 20:00 om sommeren.
+name: "Søndagsoppsummering"
+description: "Ukentlig evaluering: hva gikk opp, hva stagnerte, hva justeres"
+trigger:
+  on: schedule
+  cron: "0 18 * * 0"
+steps:
+  - id: vekk_coach
+    action: send_message
+    text: >-
+      @Coach Ukesoppsummering. Følg søndagsprotokollen: sammenlign uken mot
+      mandagens plan og begrunnelse (mem/uke-NN), oppsummer hva som gikk opp
+      og hva som stagnerte, vær ærlig om egne bomskudd, og oppdater minnet
+      med fasit så neste mandagsplan kan lære av det.

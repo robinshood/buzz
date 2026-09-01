@@ -1,0 +1,16 @@
+# Hemmeligheter og lokale data — skal ALDRI committes
+.env
+*.db
+*.db-wal
+*.db-shm
+tokens/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
